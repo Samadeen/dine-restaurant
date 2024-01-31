@@ -1,0 +1,67 @@
+.hero_container {
+  background: url('../../assets/hero.png') no-repeat;
+  height: 51.25rem;
+  background-color: #000;
+  object-fit: cover;
+  background-size: 100%;
+
+  @media (max-width: 1300px) {
+    background-size: auto;
+  }
+  @media (max-width: 898px) {
+    background: url('../../assets/tab-hero.png');
+    background-repeat: no-repeat;
+    height: 60.25rem;
+    background-color: #000;
+    background-position: top;
+    // width: 100vw;
+  }
+
+  .hero_text {
+    max-width: 74%;
+    margin: auto;
+
+    @media (max-width: 898px) {
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 90vh;
+    }
+
+    img {
+      margin-top: 4rem;
+
+      @media (max-width: 898px) {
+        margin-top: 11rem;
+      }
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 5rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 5rem; /* 100% */
+      letter-spacing: -0.0625rem;
+      //   width: 31.6rem;
+      margin: 9.56rem 0 0.68rem;
+      @media (max-width: 898px) {
+        margin: 2.38rem 0 1.25rem;
+        // font-size: 3rem;
+        text-align: center;
+      }
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.875rem; /* 150% */
+      width: 27.8rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
