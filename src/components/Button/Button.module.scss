@@ -1,0 +1,19 @@
+button {
+  color: #fff;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1rem; /* 94.118% */
+  letter-spacing: 0.15625rem;
+  border: none;
+  background: #111;
+  width: 15.3125rem;
+  height: 4rem;
+  text-transform: uppercase;
+
+  &.transparent {
+    border: 1px solid #fff;
+    background-color: transparent;
+  }
+}
