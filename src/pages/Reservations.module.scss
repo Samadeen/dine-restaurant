@@ -1,0 +1,260 @@
+.reserve_container {
+  background: url('../assets/reserve.png') no-repeat;
+  background-position: top;
+  background-size: 100%;
+  object-fit: cover;
+
+  small {
+    color: #b54949;
+    font-family: 'League Spartan';
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.00781rem;
+  }
+
+  @media (min-width: 1600px) {
+    background-size: 100%;
+    height: 37.5rem;
+  }
+
+  .wrapper {
+    max-width: 75vw;
+    margin: 0 auto;
+    height: 37.5rem;
+    // margin-bottom: 2rem;
+
+    @media (min-width: 1600px) {
+      margin-bottom: 0;
+    }
+
+    .logo {
+      margin-top: 4.06rem;
+    }
+
+    .reserve {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transform: translateY(-5.5rem);
+      z-index: 50;
+      position: relative;
+
+      .reserve_details {
+        width: 27.8125rem;
+        h1 {
+          color: #fff;
+          font-size: 5rem;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 5rem; /* 100% */
+          letter-spacing: -0.0625rem;
+        }
+
+        p {
+          color: #fff;
+          font-size: 1.25rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.875rem; /* 150% */
+          margin-top: 1.12rem;
+        }
+      }
+
+      form {
+        background: #fff;
+        box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+        width: 33.75rem;
+        flex-shrink: 0;
+        padding: 3rem;
+        transform: translateY(14.5rem);
+        z-index: 10;
+        position: relative;
+
+        .label {
+          width: 100%;
+          display: block;
+          margin-bottom: 2.13rem;
+
+          input {
+            border: none;
+            border-bottom: 0.0625rem solid #8e8e8e;
+            width: 100%;
+            font-family: inherit;
+            color: #111;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.75rem; /* 140% */
+            padding: 0 0 0.88rem 1rem;
+            outline: none;
+            margin-bottom: 0.75rem;
+            &::placeholder {
+              color: #1111116e;
+            }
+
+            &.errorPlaceholder::placeholder {
+              color: #b54949;
+            }
+          }
+
+          small {
+            margin-left: 1rem;
+          }
+        }
+
+        .date,
+        .time {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2.12rem;
+
+          h6 {
+            color: #111;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.75rem; /* 140% */
+          }
+
+          .fields {
+            display: flex;
+            gap: 1rem;
+            label {
+              width: 5.5rem;
+              input {
+                font-family: inherit;
+                border: none;
+                border-bottom: 0.0625rem solid #8e8e8e;
+                width: 100%;
+                color: #111;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.75rem; /* 140% */
+                padding: 0 0 0.88rem 1rem;
+                outline: none;
+                &::placeholder {
+                  color: #1111116e;
+                }
+
+                &.errorPlaceholder {
+                  border-bottom: 0.0625rem solid #b54949;
+
+                  &::placeholder {
+                    color: #b54949;
+                  }
+                }
+              }
+            }
+
+            .am {
+              width: 5.5rem;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border-bottom: 0.0625rem solid #8e8e8e;
+              padding: 0 0 0.88rem 1rem;
+
+              h5 {
+                color: #111;
+                font-size: 1.25rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.75rem; /* 140% */
+              }
+
+              .pm {
+                position: absolute;
+                width: 6.625rem;
+                height: 6.4375rem;
+                flex-shrink: 0;
+                background: #fff;
+                box-shadow: 0px 15px 25px 0px rgba(56, 66, 85, 0.25);
+                top: 115%;
+                left: 0;
+                padding: 1.13rem 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 1rem;
+                display: none;
+
+                .chi {
+                  display: flex;
+                  align-items: center;
+                  gap: 0.97rem;
+                }
+              }
+            }
+          }
+        }
+
+        .people {
+          padding: 1rem 1.81rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 0.0625rem solid #8e8e8e;
+          margin-bottom: 2.12rem;
+
+          svg {
+            cursor: pointer;
+          }
+
+          h4 {
+            color: #151515;
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.5rem; /* 120% */
+            letter-spacing: -0.01563rem;
+          }
+        }
+
+        button {
+          color: #fff;
+          font-family: 'League Spartan', sans-serif;
+          font-size: 1.0625rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 1rem;
+          letter-spacing: 0.15625rem;
+          border: none;
+          background: linear-gradient(to right, #111 50%, #fff 50%);
+          background-size: 200% 100%;
+          transition: background-position 1s;
+          height: 4rem;
+          text-transform: uppercase;
+          cursor: pointer;
+          padding: 0 3.44rem;
+          width: 100%;
+          &:hover {
+            background-position: -100% 0;
+            color: #111;
+            border: 1px solid #111;
+          }
+        }
+      }
+    }
+  }
+
+  .gray {
+    position: relative;
+    z-index: 1;
+    height: 20rem;
+    display: block;
+
+    svg {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+}
