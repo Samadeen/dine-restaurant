@@ -5,8 +5,9 @@ footer {
     max-width: 74vw;
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    height: 15rem;
+    align-items: flex-start;
+    padding: 5rem 0;
+    // height: 15rem;
 
     img {
       margin-right: 12.04rem;
