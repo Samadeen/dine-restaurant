@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
 
 const Button = ({
@@ -9,7 +10,7 @@ const Button = ({
 }) => {
   return (
     <button className={transparent === true ? styles.transparent : ''}>
-      {text}
+      <Link to='/reserve'>{text}</Link>
     </button>
   );
 };
