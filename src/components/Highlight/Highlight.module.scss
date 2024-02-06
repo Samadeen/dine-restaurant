@@ -1,6 +1,5 @@
 .highlight_container {
   background: #111;
-  //   height: 47.5625rem;
 
   .wrapper {
     max-width: 74vw;
@@ -9,10 +8,31 @@
     align-items: center;
     justify-content: center;
     gap: 7.81rem;
-    height: 47.5625rem;
+    padding-bottom: 7rem;
+    // height: 47.5625rem;
+
+    @media (max-width: 898px) {
+      flex-direction: column;
+      max-width: 80vw;
+      padding-top: 6rem;
+    }
+
+    @media (max-width: 500px) {
+      max-width: 95vw;
+      gap: 1.81rem;
+    }
 
     .highlight_details {
       width: 27.8125rem;
+
+      @media (max-width: 898px) {
+        width: 85%;
+        text-align: center;
+      }
+
+      @media (max-width: 500px) {
+        width: 80%;
+      }
 
       h2 {
         color: #fff;
@@ -22,6 +42,13 @@
         line-height: 3rem; /* 100% */
         letter-spacing: -0.03125rem;
         margin: 3.44rem 0 1.69rem;
+
+        @media (max-width: 500px) {
+          font-size: 2rem;
+          line-height: 2.5rem; /* 125% */
+          letter-spacing: -0.025rem;
+          margin: 1rem 0 0.6rem;
+        }
       }
 
       p {
@@ -30,6 +57,11 @@
         font-style: normal;
         font-weight: 400;
         line-height: 1.875rem; /* 150% */
+
+        @media (max-width: 500px) {
+          font-size: 1rem;
+          line-height: 1.625rem; /* 162.5% */
+        }
       }
     }
 
@@ -37,14 +69,26 @@
       width: 33.75rem;
       padding-top: 25%;
 
+      @media (max-width: 898px) {
+        padding-top: 0;
+      }
+
+      @media (max-width: 500px) {
+        width: 90%;
+        padding-top: 0;
+      }
+
       .tab_details {
         .line {
           width: 100%;
           opacity: 0.1494;
           background: #fff;
           height: 0.0625rem;
-          //   padding: 1.5rem 0;
           margin-bottom: 1.5rem;
+
+          @media (max-width: 500px) {
+            display: none;
+          }
         }
         .tab_det {
           display: flex;
@@ -52,23 +96,48 @@
           gap: 3.87rem;
           margin-bottom: 1.5rem;
 
+          @media (max-width: 500px) {
+            flex-direction: column;
+            margin: 0;
+          }
+
           .salmon {
             background: url('../../assets/salmon.png') no-repeat;
             width: 8rem;
             height: 6rem;
             position: relative;
+
+            @media (max-width: 500px) {
+              background: url('../../assets/mob-salmon.png') no-repeat;
+              width: 20.4375rem;
+              height: 15.3125rem;
+              margin-top: 5rem;
+            }
           }
           .filet {
             background: url('../../assets/filet.png') no-repeat;
             width: 8rem;
             height: 6rem;
             position: relative;
+
+            @media (max-width: 500px) {
+              background: url('../../assets/mob-filet.png') no-repeat;
+              width: 20.4375rem;
+              height: 15.3125rem;
+              margin-top: 5rem;
+            }
           }
           .mousse {
             background: url('../../assets/mousse.svg') no-repeat;
             width: 8rem;
             height: 6rem;
             position: relative;
+            @media (max-width: 500px) {
+              background: url('../../assets/mob-mousse.png') no-repeat;
+              width: 20.4375rem;
+              height: 15.3125rem;
+              margin-top: 5rem;
+            }
           }
 
           .filet,
@@ -85,6 +154,9 @@
             }
           }
           .tab_detail {
+            @media (max-width: 500px) {
+              text-align: center;
+            }
             h3 {
               color: #fff;
               font-size: 1.25rem;
