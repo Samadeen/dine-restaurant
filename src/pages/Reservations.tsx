@@ -26,6 +26,8 @@ const Reservations = () => {
     year: '',
   });
   const [num, setNum] = useState(1);
+  const [zone, setZone] = useState('AM');
+  const [active, setActive] = useState(false);
 
   const handleDecrement = () => {
     // Ensure num does not go below 1
@@ -35,6 +37,14 @@ const Reservations = () => {
   const handleIncrement = () => {
     // Increment as usual
     setNum((prevState) => prevState + 1);
+  };
+
+  const handleZone = () => {
+    if (zone === 'AM') {
+      setZone('PM');
+    } else {
+      setZone('AM');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -334,43 +344,52 @@ const Reservations = () => {
                       }
                     />
                   </label>
-                  <div className={styles.am}>
-                    <h5>AM</h5>
+                  <div
+                    className={styles.am}
+                    onClick={() => setActive((prevState) => !prevState)}
+                  >
+                    <h5>{zone}</h5>
                     <img src={arrow} alt='arrow' />
-                    <div className={styles.pm}>
-                      <div className={styles.chi}>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='12'
-                          height='11'
-                          viewBox='0 0 12 11'
-                          fill='none'
-                        >
-                          <path
-                            d='M0 5.89681L2.76748 8.66429L10.4318 1'
-                            stroke='#9E7F66'
-                            stroke-width='2'
-                          />
-                        </svg>
-                        <h5>AM</h5>
+                    {active && (
+                      <div className={styles.pm}>
+                        <div className={styles.chi} onClick={handleZone}>
+                          {zone === 'AM' && (
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              width='12'
+                              height='11'
+                              viewBox='0 0 12 11'
+                              fill='none'
+                            >
+                              <path
+                                d='M0 5.89681L2.76748 8.66429L10.4318 1'
+                                stroke='#9E7F66'
+                                stroke-width='2'
+                              />
+                            </svg>
+                          )}
+                          <h5>AM</h5>
+                        </div>
+                        <div className={styles.chi} onClick={handleZone}>
+                          {zone === 'PM' && (
+                            <svg
+                              xmlns='http://www.w3.org/2000/svg'
+                              width='12'
+                              height='11'
+                              viewBox='0 0 12 11'
+                              fill='none'
+                            >
+                              <path
+                                d='M0 5.89681L2.76748 8.66429L10.4318 1'
+                                stroke='#9E7F66'
+                                stroke-width='2'
+                              />
+                            </svg>
+                          )}
+                          <h5>PM</h5>
+                        </div>
                       </div>
-                      <div className={styles.chi}>
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='12'
-                          height='11'
-                          viewBox='0 0 12 11'
-                          fill='none'
-                        >
-                          <path
-                            d='M0 5.89681L2.76748 8.66429L10.4318 1'
-                            stroke='#9E7F66'
-                            stroke-width='2'
-                          />
-                        </svg>
-                        <h5>PM</h5>
-                      </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
