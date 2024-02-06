@@ -14,7 +14,12 @@
     height: 60.25rem;
     background-color: #111;
     background-position: top;
+    background-size: 100%;
     // width: 100vw;
+  }
+
+  @media (max-width: 500px) {
+    height: 48.25rem;
   }
 
   .hero_text {
@@ -28,14 +33,19 @@
       justify-content: center;
       flex-direction: column;
       min-height: 90vh;
+      transform: translateY(4.5rem);
+    }
+
+    @media (max-width: 798px) {
+      transform: translateY(8rem);
+    }
+
+    @media (max-width: 500px) {
+      transform: translateY(2.5rem);
     }
 
     img {
       margin-top: 4rem;
-
-      @media (max-width: 898px) {
-        margin-top: 11rem;
-      }
     }
 
     h1 {
@@ -45,12 +55,19 @@
       font-weight: 300;
       line-height: 5rem; /* 100% */
       letter-spacing: -0.0625rem;
-      //   width: 31.6rem;
       margin: 9.56rem 0 0.68rem;
       @media (max-width: 898px) {
         margin: 2.38rem 0 1.25rem;
-        // font-size: 3rem;
         text-align: center;
+        font-size: 3rem;
+        line-height: 4rem; /* 133.333% */
+        letter-spacing: -0.0375rem;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 2rem;
+        line-height: 2.5rem; /* 125% */
+        letter-spacing: -0.025rem;
       }
     }
 
@@ -62,6 +79,17 @@
       line-height: 1.875rem; /* 150% */
       width: 27.8rem;
       margin-bottom: 2.5rem;
+
+      @media (max-width: 898px) {
+        width: 75%;
+        text-align: center;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 1rem;
+        line-height: 1.625rem; /* 162.5% */
+        width: 80%;
+      }
     }
   }
 }
