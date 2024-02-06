@@ -9,9 +9,11 @@ const Button = ({
   text: string;
 }) => {
   return (
-    <button className={transparent === true ? styles.transparent : ''}>
-      <Link to='/reserve'>{text}</Link>
-    </button>
+    <Link to='/reserve'>
+      <button className={transparent === true ? styles.transparent : ''}>
+        {text}
+      </button>
+    </Link>
   );
 };
 
