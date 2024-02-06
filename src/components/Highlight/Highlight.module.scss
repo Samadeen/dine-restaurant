@@ -151,6 +151,10 @@
               background: #9e7f66;
               right: -33.5%;
               top: 18%;
+
+              @media (max-width: 500px) {
+                display: none;
+              }
             }
           }
           .tab_detail {
