@@ -4,11 +4,14 @@
     max-width: 74vw;
     margin: 0 auto;
 
+    @media (max-width: 500px) {
+      max-width: 90vw;
+    }
+
     .top_showcase,
     .bottom_showcase {
       display: flex;
       align-items: center;
-      //   justify-content: center;
       gap: 7.81rem;
 
       @media (min-width: 1650px) {
@@ -29,6 +32,10 @@
           left: -65%;
           top: 10%;
         }
+
+        @media (max-width: 500px) {
+          display: none;
+        }
       }
 
       .place {
@@ -48,6 +55,13 @@
           height: 22.5rem;
           width: 35.8125rem;
         }
+        @media (max-width: 500px) {
+          background: url('../../assets/mob-place.png') no-repeat;
+          width: 20.4375rem;
+          flex-shrink: 0;
+          background-position: center;
+          object-fit: cover;
+        }
       }
 
       .showcase_text {
@@ -60,6 +74,10 @@
           text-align: center;
         }
 
+        @media (max-width: 500px) {
+          width: 100%;
+        }
+
         h2 {
           color: #242b37;
           font-size: 3rem;
@@ -68,6 +86,14 @@
           line-height: 3rem; /* 100% */
           letter-spacing: -0.03125rem;
           margin: 3.44rem 0 1.69rem;
+
+          @media (max-width: 500px) {
+            font-size: 2rem;
+            line-height: 2.5rem; /* 125% */
+            letter-spacing: -0.025rem;
+            margin: 2.44rem 0 1.69rem;
+            width: 20.4375rem;
+          }
         }
 
         p {
@@ -76,6 +102,12 @@
           font-style: normal;
           font-weight: 400;
           line-height: 1.875rem; /* 150% */
+
+          @media (max-width: 500px) {
+            font-size: 1rem;
+            line-height: 1.625rem; /* 162.5% */
+            width: 90%;
+          }
         }
       }
     }
@@ -90,6 +122,11 @@
       @media (max-width: 898px) {
         flex-direction: column;
         gap: 0rem;
+        margin-bottom: 7.38rem;
+      }
+
+      @media (max-width: 500px) {
+        margin-bottom: 6.31rem;
       }
 
       .images {
@@ -97,14 +134,24 @@
           position: absolute;
           right: 0;
           bottom: 0;
+
+          @media (max-width: 898px) {
+            right: -68%;
+            bottom: -10%;
+            z-index: -1;
+          }
+
+          @media (max-width: 500px) {
+            display: none;
+          }
         }
+
         .food {
           background: url('../../assets/food.png') no-repeat;
           width: 33.75rem;
           height: 45rem;
           flex-shrink: 0;
           background-color: #ededed;
-          // box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
           object-fit: cover;
           transform: translateY(4rem);
           position: relative;
@@ -113,7 +160,17 @@
             background: url('../../assets/tab-f00d.png') no-repeat;
             height: 22.5rem;
             width: 35.8125rem;
-            margin-bottom: 3.5rem;
+            margin: 5.5rem 0 8.5rem;
+          }
+
+          @media (max-width: 500px) {
+            background: url('../../assets/mob-food.png') no-repeat;
+            width: 20.4375rem;
+            flex-shrink: 0;
+            background-position: center;
+            object-fit: cover;
+            box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.5);
+            margin: 2rem 0 8.5rem;
           }
 
           svg {
@@ -121,6 +178,15 @@
             right: 0;
             top: 40%;
             right: -20%;
+
+            @media (max-width: 898px) {
+              top: 60%;
+              // bottom: 20%;
+            }
+
+            @media (max-width: 500px) {
+              display: none;
+            }
           }
         }
       }
