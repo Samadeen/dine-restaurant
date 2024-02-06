@@ -44,6 +44,10 @@
       transform: translateY(2.5rem);
     }
 
+    @media (max-width: 400px) {
+      transform: translateY(1rem);
+    }
+
     img {
       margin-top: 4rem;
     }
