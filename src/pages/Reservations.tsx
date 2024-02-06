@@ -4,6 +4,7 @@ import regray from '../assets/re-gray.png';
 import arrow from '../assets/arrow-down.svg';
 import Footer from '../components/Footer/Footer';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Reservations = () => {
   const [formData, setFormData] = useState({
@@ -146,7 +147,9 @@ const Reservations = () => {
     <section className={styles.reserve_container}>
       <>
         <div className={styles.wrapper}>
-          <img src={dine} alt='dine logo' className={styles.logo} />
+          <Link to='/'>
+            <img src={dine} alt='dine logo' className={styles.logo} />
+          </Link>
           <div className={styles.reserve}>
             <div className={styles.reserve_details}>
               <h1>Reservations</h1>
