@@ -4,6 +4,20 @@
   background-size: 100%;
   object-fit: cover;
 
+  a {
+    position: relative;
+    z-index: 100;
+  }
+
+  @media (max-width: 898px) {
+    background-size: cover;
+    height: 37.5rem;
+  }
+
+  @media (max-width: 500px) {
+    height: 37.5rem;
+  }
+
   small {
     color: #b54949;
     font-family: 'League Spartan';
@@ -29,8 +43,23 @@
       margin-bottom: 0;
     }
 
+    @media (max-width: 898px) {
+      max-width: 90vw;
+    }
+
+    @media (max-width: 500px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
     .logo {
-      margin-top: 4.06rem;
+      padding-top: 4.06rem;
+
+      @media (max-width: 500px) {
+        padding-top: 26.06rem;
+      }
     }
 
     .reserve {
@@ -41,8 +70,19 @@
       z-index: 50;
       position: relative;
 
+      @media (max-width: 898px) {
+        flex-direction: column;
+        justify-content: center;
+        transform: translateY(5rem);
+        text-align: center;
+      }
+
       .reserve_details {
         width: 27.8125rem;
+
+        @media (max-width: 898px) {
+          width: 90vw;
+        }
         h1 {
           color: #fff;
           font-size: 5rem;
@@ -50,6 +90,12 @@
           font-weight: 300;
           line-height: 5rem; /* 100% */
           letter-spacing: -0.0625rem;
+
+          @media (max-width: 500px) {
+            font-size: 2rem;
+            line-height: 2.5rem; /* 125% */
+            letter-spacing: -0.025rem;
+          }
         }
 
         p {
@@ -59,6 +105,17 @@
           font-weight: 400;
           line-height: 1.875rem; /* 150% */
           margin-top: 1.12rem;
+
+          @media (max-width: 898px) {
+            width: 35.8125rem;
+            margin: 0.75rem auto 2.38rem;
+          }
+
+          @media (max-width: 500px) {
+            width: 90%;
+            font-size: 1rem;
+            line-height: 1.625rem; /* 162.5% */
+          }
         }
       }
 
@@ -71,6 +128,16 @@
         transform: translateY(14.5rem);
         z-index: 10;
         position: relative;
+
+        @media (max-width: 500px) {
+          width: 90vw;
+        }
+
+        @media (max-width: 898px) {
+          flex-direction: column;
+          justify-content: center;
+          transform: translateY(0);
+        }
 
         .label {
           width: 100%;
@@ -111,12 +178,22 @@
           justify-content: space-between;
           margin-bottom: 2.12rem;
 
+          @media (max-width: 500px) {
+            align-items: flex-start;
+            flex-direction: column;
+            // justify-content: center;
+          }
+
           h6 {
             color: #111;
             font-size: 1.25rem;
             font-style: normal;
             font-weight: 400;
             line-height: 1.75rem; /* 140% */
+
+            @media (max-width: 500px) {
+              margin-bottom: 1rem;
+            }
           }
 
           .fields {
@@ -231,7 +308,7 @@
           height: 4rem;
           text-transform: uppercase;
           cursor: pointer;
-          padding: 0 3.44rem;
+          //   padding: 0 3.44rem;
           width: 100%;
           &:hover {
             background-position: -100% 0;
@@ -249,12 +326,30 @@
     height: 20rem;
     display: block;
 
+    img {
+      @media (max-width: 898px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 898px) {
+      height: 30rem;
+    }
+
+    @media (max-width: 500px) {
+      height: 40rem;
+    }
+
     svg {
       position: absolute;
       top: 70%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: -1;
+
+      @media (max-width: 898px) {
+        display: none;
+      }
     }
   }
 }
