@@ -1,13 +1,16 @@
 import styles from './Hero.module.scss';
 import dine from '../../assets/dine.svg';
 import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
     <section>
       <div className={styles.hero_container}>
         <div className={styles.hero_text}>
-          <img src={dine} alt='dine logo' />
+          <Link to='/'>
+            <img src={dine} alt='dine logo' />
+          </Link>
           <h1>
             Exquisite dining <br /> since 1989
           </h1>
